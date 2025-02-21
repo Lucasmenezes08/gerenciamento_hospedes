@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento</title>
+
+    <header>
+        <h1>Gerenciamento de hospedes</h1>
+    </header>
+
+    <main>
+        <button type="button" class="btn-add" id="btn-cadastro">Adicionar Hospede</button>
+
+        <table class="hospede-table" id="hospt">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Apartamento</th>
+                    <th scope="col">Data/entrada</th>
+                    <th scope="col">Plataforma</th>
+                    <th scope="col">Diárias</th>
+                    <th scope="col">Valor/Reserva</th>
+                    <th scope="col">Faturamento</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <section class="modals" id="modal-id">
+            <section class="modal-content">
+                <section class="modal-ask">
+                    <h2>Novo hóspede</h2>
+                    <br>
+                    <p>Deseja adicionar um novo hóspede?</p>
+                    <button class="modal-btn-confirm">Confirmar</button>
+                    <button class="modal-btn-close">Fechar</button>
+                </section>
+
+                <section class="modal-add-form">
+                    <h2>Adicionar clientes</h2>
+                    <h3>Lembre - se de confirmar a ID , nome e valores</h3>
+                    <input type="number" id="id-add" class="modal-form" data-index="new" placeholder="ID"  autocomplete="off" required>
+                    <input type="text" id="nome" class="modal-form" placeholder="Nome do hóspede" autocomplete="off" autocapitalize="on" required>
+                    <input type="text" id="apartamento" class="modal-form" placeholder="Apartamento" autocomplete="on" required>
+                    <input type="date" id="data" class="modal-form" placeholder="Data de entrada" autocomplete="off" required>
+                    <input type="text" id="plataforma" class="modal-form" placeholder="Plataforma" autocomplete="off" required>
+                    <input type="text" id="diarias" class="modal-form" placeholder="Diárias" autocomplete="off" required>
+                    <input type="number" id="valor-reserva" class="modal-form" placeholder="Valor da reserva" autocomplete="on" required>
+                </section>
+
+                <section class="modal-edit-ask">
+                    <h2>Deseja editar o formulário?</h2>
+                    <button class="modal-btn-confirm">Confirmar</button>
+                    <button class="modal-btn-close">Fechar</button>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+</head>
+<body>
+    
+</body>
+</html>

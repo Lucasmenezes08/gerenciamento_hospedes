@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded' , function(){
         document.getElementById('valor-reserva').value = "";
     
         hospede.gerarItems()
-    }    
-})
-
+    }
+ )}
 

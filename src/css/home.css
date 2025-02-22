@@ -4,6 +4,83 @@ body {
     padding : 0;
     margin : 0;
     font-family: 'Noto Sans' , sans-serif;
+    background-color: rgb(235, 232, 232);
 
 }
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+table {
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+table th {
+    height: 60px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+table td {
+    height: 40px;
+    padding-left: 20px;
+
+}
+
+.hospede-table tbody tr:nth-child(odd){
+    background-color: rgb(214, 211, 211);
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-top: 3rem;
+}
+
+.btn-add {
+    padding: 12px 12px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0px 2px 7px black;
+    background-color: rgb(52, 192, 52);
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+
+
+.btn-editar {
+    padding: 10px 10px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0px 2px 7px black;
+    background-color: rgb(218, 140, 5);
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+
+.btn-deletar {
+    padding: 10px 10px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0px 2px 7px black;
+    background-color: rgb(224, 14, 14);
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+
+
 

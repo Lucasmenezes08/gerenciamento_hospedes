@@ -11,16 +11,42 @@ class Hospede {
     }
 
 
+
+    salvarLocalStorage () {
+        localStorage.setItem('storage' , JSON.stringify(this.storage))
+    }
+
+    acessarLocalStorage () {
+        const loadItems = localStorage.getItem('storage');
+        const itemsverified =  JSON.parse(loadItems)
+
+        if(Array.isArray(itemsverified)) {
+            this.storage = itemsverified
+        }
+
+        else {
+            this.storage = []
+        }
+    }
+
+
+
     adicionarItems (id,nome,apartamento,plataforma,data,diarias,valor_reserva) {
-        for (let i = 0; i < this.storage.length ; i ++ ){
-            if (this.storage[i].id === id){
-                return
+        if (this.storage){
+            for (let i = 0; i < this.storage.length ; i ++ ){
+                if (this.storage[i].id === id){
+                    return
+                }
             }
         }
-        this.storage.push(id,nome,apartamento,plataforma,data,diarias,valor_reserva)
+        else {
+            this.storage = []
+        }
+
+        this.storage.push({id,nome,apartamento,plataforma,data,diarias,valor_reserva})
         this.salvarLocalStorage()
         this.gerarItems()
-    }
+}
     
 
     
@@ -29,37 +55,32 @@ class Hospede {
     gerarItems () {
         const tlist = document.getElementById('Tlist');
         tlist.innerHTML = '';
+        if (this.storage){
+            this.storage.forEach((value) => {
+                const tItemns = document.createElement('tr')
+                tItemns.innerHTML = `
+                    <td> ${value.id} </td>
+                    <td> ${value.nome} </td>
+                    <td> ${value.apartamento} </td>
+                    <td> ${value.plataforma} </td>
+                    <td> ${value.data} </td>
+                    <td> ${value.diarias} </td> 
+                    <td> ${value.valor_reserva} </td>
 
-        this.storage.forEach((value , index) => {
-            const tItemns = document.createElement('th')
-            tItemns.innerHTML = `
-                <span> ${value.id} </span>
-                <span> ${value.nome} </span>
-                <span> ${value.apartamento} </span>
-                <span> ${value.plataforma} </span>
-                <span> ${value.data} </span>
-                <span> ${value.diarias} </span> 
-                <span> ${value.valor_reserva} </span>
+                `
 
-            `
-        })
+                tlist.appendChild(tItemns)
+            })
+        }
     }
-
-
-
-
-
-
-    salvarLocalStorage () {
-        localStorage.setItem('storage' , JSON.stringify(this.storage))
-    }
-
-    acessarLocalStorage () {
-        const loadItems = localStorage.getItem('storage');
-        this.storage = JSON.parse(loadItems)
-    }
-
 }
+
+
+
+
+
+
+    
 
 
 

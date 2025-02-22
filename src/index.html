@@ -34,7 +34,7 @@
                 </tr>
             </thead>
 
-            <tbody class="Tlist">
+            <tbody class="Tlist" id="Tlist">
 
             </tbody>
         </table>
@@ -49,7 +49,8 @@
                     <button class="modal-btn-close">Fechar</button>
                 </section>
 
-                <section class="modal-add-form">
+                <form class="modal-add-form">
+
                     <h2>Adicionar clientes</h2>
                     <h3>Lembre - se de confirmar a ID , nome e valores</h3>
                     <input type="number" id="id-add" class="modal-form" data-index="new" placeholder="ID"  autocomplete="off" required>
@@ -59,8 +60,8 @@
                     <input type="text" id="plataforma" class="modal-form" placeholder="Plataforma" autocomplete="off" required>
                     <input type="text" id="diarias" class="modal-form" placeholder="Diárias" autocomplete="off" required>
                     <input type="number" id="valor-reserva" class="modal-form" placeholder="Valor da reserva" autocomplete="on" required>
-                    <button type="submit"class="btn-adicionar">Confirmar</button>
-                </section>
+                    <button type="submit"class="btn-adicionar" id="btn-adicionar">Confirmar</button>
+                </form>
 
                 <section class="modal-edit-ask">
                     <h2>Deseja editar o formulário?</h2>
@@ -72,6 +73,7 @@
 
     </main>
 
-    <script href="./script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./functions.js"></script>
 </body>
 </html>

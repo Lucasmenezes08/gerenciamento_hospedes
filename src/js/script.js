@@ -66,6 +66,10 @@ class Hospede {
                     <td> ${value.data} </td>
                     <td> ${value.diarias} </td> 
                     <td> ${value.valor_reserva} </td>
+                    <td>
+                        <button class="btn-editar" data-id="${value.id}">Editar</button>
+                        <button class="btn-deletar" data-id="${value.id}">Deletar</button>
+                    </td>
 
                 `
 

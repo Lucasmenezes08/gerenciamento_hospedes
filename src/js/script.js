@@ -46,10 +46,21 @@ class Hospede {
         this.storage.push({id,nome,apartamento,plataforma,data,diarias,valor_reserva})
         this.salvarLocalStorage()
         this.gerarItems()
-}
-    
+    }
 
-    
+
+    excluirItems (id) {
+        if (this.storage){
+            for (let i = 0 ; i < this.storage.length ; i ++){
+                if (this.storage[i].id == id){
+                    this.storage.splice(i,1)
+                    break
+                }
+            }
+        }
+        this.salvarLocalStorage()
+        this.gerarItems()
+    }
 
 
     gerarItems () {

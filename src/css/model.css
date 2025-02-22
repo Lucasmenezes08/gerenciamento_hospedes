@@ -55,11 +55,15 @@
     padding: 10px 10px;
     border-radius: 18px;
     border: none;
-    box-shadow: 0px 2px 7px black;
+    box-shadow: 0px 2px 7px rgb(37, 37, 37);
     background-color: rgb(52, 192, 52);
     font-size: 12px;
     font-weight: 500;
+    cursor: pointer;
+}
 
+.modal-btn-confirm:hover{
+    box-shadow: 4px 4px 7px black;
 }
 
 .modal-btn-close {
@@ -70,8 +74,12 @@
     background-color:  rgb(224, 14, 14);
     font-size: 12px;
     font-weight: 500;
+    cursor: pointer;
 }
 
+.modal-btn-close:hover {
+    box-shadow: 4px 4px 7px black;
+}
 
 .btn-adicionar {
     padding: 5px 5px;
@@ -81,4 +89,22 @@
     box-shadow: 0px 2px 7px black;
     font-size: 10px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-adicionar:hover {
+    animation-name: borderanimate ;
+    animation-delay: 200ms;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes borderanimate {
+    0% {
+        border : none
+    }
+
+    100% {
+        border: solid 2px black
+    }
 }

@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded' , function(){
 
     btn_close.addEventListener('click' , function(){
         document.querySelector('.modals').style.display = 'none'
+        document.querySelector('.modal-add-form').style.display = 'none'
     })
 
 
@@ -59,18 +60,7 @@ document.addEventListener('DOMContentLoaded' , function(){
         document.getElementById('valor-reserva').value = "";
     
         hospede.gerarItems()
-            
-    }
-
-    function excluirItems () {
-        hospede.excluirItems(id)
-        hospede.gerarItems()
-    }
-    
-    
-    
-    
-    
+    }    
 })
 
 

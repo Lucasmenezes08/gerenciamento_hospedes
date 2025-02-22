@@ -16,7 +16,6 @@ header {
 
 table {
     width: 100%;
-    user-select: none;
     text-align: left;
     margin-top: 3rem;
 }

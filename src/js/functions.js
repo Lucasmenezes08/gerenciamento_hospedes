@@ -3,7 +3,33 @@ document.addEventListener('DOMContentLoaded' , function(){
     const hospede = new Hospede({})
     hospede.acessarLocalStorage()
     hospede.gerarItems()
+
+    const btn_confirm = document.querySelector('.modal-ask .modal-btn-confirm')
+    const btn_close = document.querySelector('.modal-ask .modal-btn-close')
+    const btn_add = document.getElementById('btn-cadastro')
+    const askModal = document.getElementById('modal-ask')
+    const addModal = document.querySelector('.modal-add-form')
     
+
+    btn_add.addEventListener ("click" , function () {
+        console.log("Botao adicionado")
+        document.querySelector('.modals').style.display = 'block'
+    })
+
+
+    btn_confirm.addEventListener('click' , function(){
+        document.querySelector('.modals').style.display = 'none'
+        document.querySelector('.modals').style.display = 'block'
+        document.querySelector('.modal-add-form').style.display = 'block'
+        
+
+    })
+
+    btn_close.addEventListener('click' , function(){
+        document.querySelector('.modals').style.display = 'none'
+    })
+
+
     form.addEventListener('submit' , function(event){
         event.preventDefault()
         adicionarItems()

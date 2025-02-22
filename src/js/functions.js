@@ -7,12 +7,9 @@ document.addEventListener('DOMContentLoaded' , function(){
     const btn_confirm = document.querySelector('.modal-ask .modal-btn-confirm')
     const btn_close = document.querySelector('.modal-ask .modal-btn-close')
     const btn_add = document.getElementById('btn-cadastro')
-    const askModal = document.getElementById('modal-ask')
-    const addModal = document.querySelector('.modal-add-form')
     
 
     btn_add.addEventListener ("click" , function () {
-        console.log("Botao adicionado")
         document.querySelector('.modals').style.display = 'block'
     })
 
@@ -21,7 +18,6 @@ document.addEventListener('DOMContentLoaded' , function(){
         document.querySelector('.modals').style.display = 'none'
         document.querySelector('.modals').style.display = 'block'
         document.querySelector('.modal-add-form').style.display = 'block'
-        
 
     })
 
@@ -33,6 +29,13 @@ document.addEventListener('DOMContentLoaded' , function(){
     form.addEventListener('submit' , function(event){
         event.preventDefault()
         adicionarItems()
+    })
+
+    document.getElementById('Tlist').addEventListener('click' , function(event){
+        if (event.target.classList.contains('btn-deletar')){
+            const id = event.target.dataset.id
+            hospede.excluirItems(id)
+        }
     })
 
     function adicionarItems () {
@@ -57,6 +60,11 @@ document.addEventListener('DOMContentLoaded' , function(){
     
         hospede.gerarItems()
             
+    }
+
+    function excluirItems () {
+        hospede.excluirItems(id)
+        hospede.gerarItems()
     }
     
     

@@ -61,5 +61,5 @@ document.addEventListener('DOMContentLoaded' , function(){
     
         hospede.gerarItems()
     }
- )}
+})
 
